@@ -25,6 +25,18 @@ class MyApp extends StatelessWidget {
           drawer: Drawer(
             child: ListView(//lista de elementos
               children: <Widget>[//array
+                DrawerHeader(//widget que muestra un header en el sidebar
+                  child: null,//por el momento está vacío
+                  /* boxdecoration nos ayuda a darle un estilo a diferentes
+                   * widgets que funcionan como contenedor
+                  */
+                  decoration: BoxDecoration(
+                    image: DecorationImage(//seteamos una imagen de fondo
+                      fit: BoxFit.cover,//colocamos para que cubra todo
+                      image: AssetImage('assets/drawer_bg.jpg'),//colocamos el recurso
+                    ),
+                  ),
+                ),
                 ListTile(//elemento de la lista
                   leading: Icon(Icons.home),//icono, puede ser una imagen
                   title: Text('Inicio'),//texto del título
